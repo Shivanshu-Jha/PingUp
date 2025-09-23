@@ -102,7 +102,7 @@ export const getChatMessages = async (req, res) => {
     }
 }
 
-// Get User Recent Messages
+// Get User Recent Messages 
 export const getUserRecentMessages = async (req, res) => {
     try {
         const { userId } = req.auth()
