@@ -65,14 +65,14 @@ export const updateUserData = async (req, res) => {
                 ]
             })
 
-            updatedData.profile_pucture = url
+            updatedData.profile_picture = url
         }
         // cover photo
         if (cover) {
             const buffer = fs.readFileSync(cover.path)
             const response = await imagekit.upload({
                 file: buffer,
-                fileName: profile.originalname,
+                fileName: cover.originalname,
             })
 
             const url = imagekit.url({
@@ -106,10 +106,10 @@ export const discoverUsers = async (req, res) => {
         const allUsers = await User.find(
             {
                 $or: [
-                    { username: new RegExp(input, i) },
-                    { email: new RegExp(input, i) },
-                    { full_name: new RegExp(input, i) },
-                    { location: new RegExp(input, i) },
+                    { username: new RegExp(input, 'i') },
+                    { email: new RegExp(input, 'i') },
+                    { full_name: new RegExp(input, 'i') },
+                    { location: new RegExp(input, 'i') },
                 ]
             }
         )
@@ -192,7 +192,7 @@ export const sendConnectionRequest = async (req, res) => {
         }
 
         // Check if users are already connected
-        const connection = await Connection.find({
+        const connection = await Connection.findOne({
             $or: [
                 { from_user_id: userId, to_user_id: id },
                 { from_user_id: id, to_user_id: userId },
