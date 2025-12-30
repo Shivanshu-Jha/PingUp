@@ -48,23 +48,30 @@ cd PingUp
 ```
 
 # Install server dependencies
+```bash
 cd server
 npm install
+```
 
 # Install client dependencies
+```bash
 cd ../client
 npm install
+```
 
 Running Locally
 
 # Start backend
+```bash
 cd server
 npm start
+```
 
 # Start frontend
+```bash
 cd ../client
 npm start
-
+```
 
 The project is deployed using Vercel. To deploy your own version:
 vercel deploy
