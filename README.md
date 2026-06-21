@@ -8,8 +8,11 @@ Check it out here: [ping-up-ruddy.vercel.app](https://ping-up-ruddy.vercel.app/)
 ## 📁 Project Structure
 
 PingUp/
+
 ├── client/        # React frontend
+
 ├── server/        # Express backend
+
 └── .gitignore     # Sensitive file exclusions
 
 
@@ -47,7 +50,7 @@ cd server
 npm install
 
 # Install client dependencies
-cd ../client
+cd client
 npm install
 
 
@@ -56,7 +59,7 @@ cd server
 npm start
 
 # Start frontend
-cd ../client
+cd client
 npm start
 
 
