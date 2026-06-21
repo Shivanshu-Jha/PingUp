@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar'
 import { Outlet } from 'react-router-dom'
 import { Menu, X } from 'lucide-react';
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import Loading from '../components/Loading';
 
 const Layout = () => {
@@ -10,6 +11,15 @@ const Layout = () => {
 
   const user = useSelector((state) => state.user.value)
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const theme = useSelector((state) => state.theme.value)
+
+  useEffect(() => {
+    if (!theme) return
+    const other = theme === 'dark' ? 'light' : 'dark'
+    document.documentElement.classList.remove(other)
+    document.documentElement.classList.add(theme)
+    try { localStorage.setItem('theme', theme) } catch (e) { }
+  }, [theme])
 
   return user ? (
     <div className='w-full flex h-screen'>

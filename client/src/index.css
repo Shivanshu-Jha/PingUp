@@ -1,6 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 
+*{font-family:'Outfit',sans-serif} .no-scrollbar::-webkit-scrollbar{display:none}
+
+:root{--app-bg:#f5f5f5;--app-text:#111827;--muted:#6b7280;--card:#fff;--border:#e5e7eb;--card-hover:#f3f4f6;--muted-bg:#f1f5f9}
+.dark{--app-bg:#0b1220;--app-text:#e6eef8;--muted:#9ca3af;--card:#0f1724;--border:#27303a;--card-hover:#0b1420;--muted-bg:#07101a}
+html,body{background:var(--app-bg);color:var(--app-text)}
+
+/* backgrounds */
+.bg-white{background:var(--card)!important}.bg-white\/80{background:rgba(255,255,255,.8)!important}.dark .bg-white\/80{background:rgba(15,23,36,.8)!important}
+.bg-slate-50,.bg-gray-50{background:var(--app-bg)!important}.bg-slate-100,.bg-gray-100{background:var(--muted-bg)!important}.bg-zinc-800{background:#0b1220!important}
+
+/* text */
+.text-slate-900,.text-slate-800,.text-slate-700{color:var(--app-text)!important}
+.text-slate-600,.text-slate-500,.text-slate-400,.text-gray-800,.text-gray-700,.text-gray-600,.text-gray-500,.text-gray-400{color:var(--muted)!important}
+.text-black{color:var(--app-text)!important}
+
+/* borders & shadows */
+.border-gray-200,.border-gray-300{border-color:var(--border)!important}
+.shadow,.shadow-md,.shadow-lg,.shadow-sm{box-shadow:0 6px 18px rgba(2,6,23,.12)}.rounded-md{background-clip:padding-box}
+
+/* hover */
+.hover\:bg-gray-50:hover,.hover\:bg-slate-200:hover,.hover\:bg-white:hover{background:var(--card-hover)!important}
+.hover\:text-gray-900:hover,.hover\:text-black:hover{color:var(--app-text)!important}
+
+/* gradients */
+.bg-gradient-to-r.from-indigo-500{background-image:linear-gradient(to right,#6366f1,#8b5cf6)!important}
+.bg-gradient-to-r.from-indigo-500\.to-purple-600{background-image:linear-gradient(to right,#6366f1,#7c3aed)!important}
+
+/* forms */
+input,textarea,select{background:var(--card)!important;color:var(--app-text)!important;border-color:var(--border)!important}
+input::placeholder,textarea::placeholder{color:var(--muted)!important;opacity:1}
+.outline-none.text-slate-700{color:var(--app-text)!important}
+
+/* stories */
+.bg-gradient-to-b.from-indigo-50{background-image:linear-gradient(to bottom,rgba(99,102,241,.08),var(--card))!important}
+.bg-gradient-to-b.from-indigo-500.to-purple-600{background-image:linear-gradient(to bottom,rgba(99,102,241,.9),rgba(124,58,237,.9))!important}
+.size-10.bg-indigo-500{background:#6366f1!important}.text-white\/60{color:rgba(255,255,255,.65)!important}
+.ring-gray-100{box-shadow:0 0 0 3px rgba(255,255,255,.06)!important}.border-dashed.border-indigo-300{border-color:rgba(99,102,241,.18)!important}
+.bg-gradient-to-b.from-indigo-500 .opacity-70,.bg-gradient-to-b.from-indigo-500 .opacity-80{opacity:.8!important}
+
+/* chat header / create story */
+.bg-gradient-to-r.from-indigo-50.to-purple-50{background-image:linear-gradient(to right,rgba(199,210,254,.12),rgba(237,233,254,.12))!important}
+.chat-header,.chat-header p,.chat-header img{color:var(--app-text)!important}.create-story-card{background:var(--card)!important;border-color:var(--border)!important}
+
+/* composites */
+.max-w-xl.flex.gap-5.p-6.bg-white.shadow.rounded-md,.w-full.max-w-88.flex.gap-5.p-6.bg-white.shadow.rounded-md,.p-4.pt-6.flex.flex-col.justify-between.w-72.shadow.border.border-gray-200.rounded-md.hover\:shadow-xl.transition{background:var(--card)!important;border-color:var(--border)!important}
+
+.text-3xl.font-bold.text-slate-900,.text-3xl.font-bold.text-slate-800{color:var(--app-text)!important}
+.bg-slate-100{background:var(--muted-bg)!important}.bg-zinc-800{background:#0b1220!important}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
 
 * {
   font-family: 'Outfit', sans-serif;
@@ -18,4 +69,222 @@
 .dark {
   background-color: #121212;
   color: #eee;
+}
+
+:root {
+  --app-bg: #f5f5f5;
+  --app-text: #111827;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --card-hover: #f3f4f6;
+  --muted-bg: #f1f5f9;
+}
+
+.dark {
+  --app-bg: #0b1220;
+  --app-text: #e6eef8;
+  --muted: #9ca3af;
+  --card: #0f1724;
+  --border: #27303a;
+  --card-hover: #0b1420;
+  --muted-bg: #07101a;
+}
+
+html,
+body {
+  background-color: var(--app-bg);
+  color: var(--app-text);
+}
+
+/* Override common Tailwind utility colors to respond to dark mode */
+.bg-white {
+  background-color: var(--card) !important;
+}
+
+.bg-white\/80 {
+  background-color: rgba(255,255,255,0.8) !important;
+}
+.dark .bg-white\/80 {
+  background-color: rgba(15,23,36,0.8) !important;
+}
+
+.bg-slate-50 {
+  background-color: var(--app-bg) !important;
+}
+
+.bg-zinc-800 {
+  background-color: #0b1220 !important;
+}
+
+.text-gray-600,
+.text-gray-700,
+.text-gray-500,
+.text-gray-400,
+.text-gray-800,
+.text-slate-600,
+.text-slate-500,
+.text-slate-400 {
+  color: var(--muted) !important;
+}
+
+.text-slate-900,
+.text-slate-800,
+.text-slate-700 {
+  color: var(--app-text) !important;
+}
+
+.text-black {
+  color: var(--app-text) !important;
+}
+
+.border-gray-200,
+.border-gray-300 {
+  border-color: var(--border) !important;
+}
+
+.shadow,
+.shadow-md,
+.shadow-lg,
+.shadow-sm {
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.12);
+}
+
+/* Slate/bg utilities */
+.bg-slate-100 {
+  background-color: var(--muted-bg) !important;
+}
+
+.bg-gray-100 {
+  background-color: var(--muted-bg) !important;
+}
+
+/* Hover utility overrides */
+.hover\:bg-gray-50:hover {
+  background-color: var(--card-hover) !important;
+}
+
+.hover\:bg-slate-200:hover {
+  background-color: var(--card-hover) !important;
+}
+
+.hover\:bg-white:hover {
+  background-color: var(--card-hover) !important;
+}
+
+.hover\:text-gray-900:hover {
+  color: var(--app-text) !important;
+}
+
+.hover\:text-black:hover {
+  color: var(--app-text) !important;
+}
+
+.hover\:from-indigo-700:hover {
+  /* leave gradient transitions as-is */
+}
+
+/* Small utility overrides for components */
+.bg-gradient-to-r.from-indigo-500 {
+  background-image: linear-gradient(to right, #6366f1, #8b5cf6) !important;
+}
+
+.bg-gradient-to-r.from-indigo-500.to-purple-600 {
+  background-image: linear-gradient(to right, #6366f1, #7c3aed) !important;
+}
+
+/* Button / small card adjustments */
+.rounded-md {
+  background-clip: padding-box;
+}
+
+/* Page-specific background and text adjustments for better dark-mode contrast */
+/* Discover page gradient */
+.bg-gradient-to-b.from-slate-50 {
+  background-image: linear-gradient(to bottom, var(--app-bg), var(--card)) !important;
+}
+
+.bg-gradient-to-b.from-slate-50.to-white {
+  background-image: linear-gradient(to bottom, var(--app-bg), var(--card)) !important;
+}
+
+/* Generic light grey page backgrounds */
+.bg-gray-50 {
+  background-color: var(--app-bg) !important;
+}
+
+.bg-slate-50 {
+  background-color: var(--app-bg) !important;
+}
+
+/* Profile cover gradient fallback in dark */
+.h-40.md\:h-56.bg-gradient-to-r.from-indigo-200.via-purple-200.to-pink-200 {
+  background-image: linear-gradient(90deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.06)) !important;
+}
+
+/* Messages & Connections list items */
+.max-w-xl.flex.gap-5.p-6.bg-white.shadow.rounded-md,
+.w-full.max-w-88.flex.gap-5.p-6.bg-white.shadow.rounded-md {
+  background-color: var(--card) !important;
+}
+
+/* Ensure inputs and textareas are readable */
+.outline-none.text-slate-700,
+input.outline-none.text-slate-700,
+textarea.outline-none.text-slate-700 {
+  color: var(--app-text) !important;
+}
+
+/* Search input and textarea readability */
+input, textarea, select {
+  background-color: var(--card) !important;
+  color: var(--app-text) !important;
+  border-color: var(--border) !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--muted) !important;
+  opacity: 1 !important;
+}
+
+/* Story card ring and overlay fixes */
+.ring-gray-100 { box-shadow: 0 0 0 3px rgba(255,255,255,0.06) !important; }
+.ring { box-shadow: 0 0 0 3px rgba(0,0,0,0.12) !important; }
+
+/* Ensure semi-transparent white text on story cards remains visible */
+.text-white\/60 { color: rgba(255,255,255,0.65) !important; }
+
+/* Create story dashed border adaptation */
+.border-dashed.border-indigo-300 { border-color: rgba(99,102,241,0.18) !important; }
+
+/* Ensure user card backgrounds adapt */
+.p-4.pt-6.flex.flex-col.justify-between.w-72.shadow.border.border-gray-200.rounded-md.hover\:shadow-xl.transition {
+  background-color: var(--card) !important;
+  border-color: var(--border) !important;
+}
+
+/* Add Story card and inner plus circle */
+.bg-gradient-to-b.from-indigo-50.to-white { background-image: linear-gradient(to bottom, rgba(99,102,241,0.08), var(--card)) !important; }
+.size-10.bg-indigo-500 { background-color: #6366f1 !important; }
+.size-10.bg-indigo-500 .w-5.h-5 { color: #fff !important; }
+
+/* Story card gradient adaptation */
+.bg-gradient-to-b.from-indigo-500.to-purple-600 { background-image: linear-gradient(to bottom, rgba(99,102,241,0.9), rgba(124,58,237,0.9)) !important; }
+
+/* Chat header gradient */
+.bg-gradient-to-r.from-indigo-50.to-purple-50 { background-image: linear-gradient(to right, rgba(199,210,254,0.12), rgba(237,233,254,0.12)) !important; }
+.bg-gradient-to-r.from-indigo-50.to-purple-50 p, .bg-gradient-to-r.from-indigo-50.to-purple-50 img { color: var(--app-text) !important; }
+
+/* Ensure chat header text and username are readable */
+.flex.items-center.gap-2.p-2.md\:px-10.xl\:pl-42.bg-gradient-to-r.from-indigo-50.to-purple-50.border-b.border-gray-300 p.font-medium {
+  color: var(--app-text) !important;
+}
+.flex.items-center.gap-2.p-2.md\:px-10.xl\:pl-42.bg-gradient-to-r.from-indigo-50.to-purple-50 p.text-sm.text-gray-500 {
+  color: var(--muted) !important;
+}
+
+/* Stronger heading contrast */
+.text-3xl.font-bold.text-slate-900,
+.text-3xl.font-bold.text-slate-800 {
+  color: var(--app-text) !important;
 }
