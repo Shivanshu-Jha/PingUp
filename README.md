@@ -1,6 +1,6 @@
 # 🚀 PingUp
 
-PingUp is a full-stack social media platform built with React JS, Express JS, and Tailwind CSS. It enables users to share posts, interact with others, and manage accounts securely. Key integrations include Clerk for authentication, ImageKit for media optimization, and Brevo for transactional emails. The project demonstrates scalable backend APIs, responsive UI design, and modern developer workflows.
+PingUp is a full-stack social media platform built with React JS, Express JS, and Tailwind CSS. It enables users to share posts, interact with others, and manage accounts securely. Key integrations include Clerk for authentication, ImageKit for media optimization, and Brevo for transactional emails. Used inngest for background jobs and scheduling. The project demonstrates scalable backend APIs, responsive UI design, and modern developer workflows.
 
 ## 🌐 Live Demo
 Check it out here: [ping-up-ruddy.vercel.app](https://ping-up-ruddy.vercel.app/)
