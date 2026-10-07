@@ -18,7 +18,7 @@ PingUp/
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React, Context API, Axios
+- **Frontend:** React, Axios
 - **Backend:** Node.js, Express
 - **Database:** MongoDB
 - **Deployment:** Vercel
