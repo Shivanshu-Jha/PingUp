@@ -167,10 +167,6 @@ Start the client:
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`.
-
-> ⚠️ Never commit `.env` files. They are listed in `.gitignore`.
-
 ---
 
 ## 🌍 Deployment
